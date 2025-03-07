@@ -8,29 +8,10 @@ duty_cycle = 0
 led = PWM(Pin(2), freq=frequency, duty=duty_cycle)
 
 #########################主程式###########################
+a = 1023
 while True:
+    for i in range(a=0):
 
-    led.duty(0)
-    sleep(1)
-    led.duty(1023)
-    sleep(1)
-    led.duty(820)
-    sleep(1)
-    led.duty(512)
-    sleep(1)
-    led.duty(256)
-    sleep(1)
-    led.duty(100)
-    sleep(1)
-    led.duty(0)
-    sleep(1)
-    led.duty(100)
-    sleep(1)
-    led.duty(256)
-    sleep(1)
-    led.duty(512)
-    sleep(1)
-    led.duty(820)
-    sleep(1)
-    led.duty(1023)
-    sleep(1)
+        led.duty(a)
+        sleep(0.001)
+        a - 1
