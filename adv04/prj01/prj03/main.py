@@ -15,3 +15,9 @@ while True:
         led.duty(a)
         sleep(0.001)
         a - 1
+
+    for i in range(a=1023):
+
+        led.duty(a)
+        sleep(0.001)
+        a + 1
