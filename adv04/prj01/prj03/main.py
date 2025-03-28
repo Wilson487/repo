@@ -6,18 +6,16 @@ from time import sleep
 frequency = 1000
 duty_cycle = 0
 led = PWM(Pin(2), freq=frequency, duty=duty_cycle)
+delay = 0.002
 
 #########################主程式###########################
-a = 1023
 while True:
-    for i in range(a=0):
+    for delay_cycle in range(1023, -1, -1):
 
-        led.duty(a)
-        sleep(0.001)
-        a - 1
+        led.duty(delay_cycle)
+        sleep(delay)
 
-    for i in range(a=1023):
+    for delay_cycle in range(1024):
 
-        led.duty(a)
-        sleep(0.001)
-        a + 1
+        led.duty(delay_cycle)
+        sleep(delay)
